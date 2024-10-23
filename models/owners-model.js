@@ -4,16 +4,16 @@ const ownerSchema = mongoose.Schema({
   fullname: {
     type: String,
     minLength: 3,
-    trim: true
+    trim: true,
   },
   email: String,
   password: String,
   products: {
     type: String,
-    default: []
+    default: [],
   },
   picture: String,
   gstin: String,
 });
 
-model.exports = mongoose.model("owner", ownerSchema);
+module.exports = mongoose.model("owner", ownerSchema);
