@@ -6,19 +6,20 @@ const userSchema = mongoose.Schema({
     minLength: 3,
     trim: true
   },
-  email: String,
+  email: {
+    type: String,
+    unique: true,
+    required: true
+  },
   password: String,
   cart: {
-    type: String,
+    type: [String],
     default: []
   },
-  isadmin: Boolean,
-  order: {
-    type: String,
+  orders: {
+    type: [String],
     default: []
   },
-  contact: Number,
-  picture: String,
 });
 
 module.exports = mongoose.model("user", userSchema);

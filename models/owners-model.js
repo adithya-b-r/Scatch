@@ -5,15 +5,17 @@ const ownerSchema = mongoose.Schema({
     type: String,
     minLength: 3,
     trim: true,
+    required: true
   },
-  email: String,
+  email: {
+    type: String,
+    required: true
+  },
   password: String,
   products: {
-    type: String,
-    default: [],
+    type: [String],
+    default: []
   },
-  picture: String,
-  gstin: String,
 });
 
 module.exports = mongoose.model("owner", ownerSchema);
