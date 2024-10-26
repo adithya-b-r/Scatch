@@ -30,8 +30,8 @@ module.exports.registerUser = async (req, res) => {
           let token = generateToken(user);
           res.cookie("token", token);
 
-          res.flash("error", "Created Successfully");
-          return res.redirect("/");
+          // res.flash("error", "Created Successfully");
+          return res.redirect("/shop");
         }
       });
     });
@@ -63,7 +63,8 @@ module.exports.loginUser = async (req, res) => {
         let token = generateToken(user);
         res.cookie("token", token);
 
-        res.send("User Logged In successfully");
+        // res.send("User Logged In successfully");
+        res.redirect("/shop");
       }
       else {
         return res.status(404).render("index", { error: "Email or Password incorrect." });
