@@ -23,7 +23,7 @@ Scatch is an online platform designed for selling bags. It allows users to brows
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/scatch.git
+   git clone https://github.com/adithya-b-r/Scatch.git
    cd scatch
    ```
 
@@ -83,6 +83,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [JWT](https://jwt.io/) for authentication
 - [Multer](https://www.npmjs.com/package/multer) for handling file uploads
 - [Sheryians Coding School](https://youtube.com/playlist?list=PLbtI3_MArDOkXRLxdMt1NOMtCS-84ibHH&si=sZsHNWBiOzpyy24s) for guidance on building the project
-
-
-```
