@@ -1,6 +1,3 @@
-Here’s a more detailed and structured README file for your "Scatch" project:
-
-```markdown
 # Scatch
 
 Scatch is an online platform designed for selling bags. It allows users to browse a variety of products, add them to their cart, and manage their orders seamlessly. The application is built with Node.js, Express, and MongoDB, and features a user-friendly interface to enhance the shopping experience.
