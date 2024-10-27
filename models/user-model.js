@@ -13,7 +13,7 @@ const userSchema = mongoose.Schema({
   },
   password: String,
   cart: {
-    type: [String],
+    type: Array,
     default: []
   },
   orders: {
