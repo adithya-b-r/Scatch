@@ -24,13 +24,29 @@ router.get("/addtocart/:productid", isLoggedIn, async (req, res) => {
 })
 
 router.get("/cart", isLoggedIn, async (req, res) => {
-  let user = userModel
-    .findOne({ email: req.user.email })
-    .populate("cart");
+  try {
+    let user = await userModel
+      .findOne({ email: req.user.email })
+      .populate("cart");
 
-  console.log(user.cart);
-  res.render("cart");
-})
+    let totalDiscount = 0;
+    let totalPrice = 0;
+
+    user.cart.forEach(item => {
+      console.log("Price: " + item.price);
+      totalPrice += item.price;
+      console.log("Discount: " + item.discount);
+      totalDiscount += item.discount;
+    });
+
+    let netTotal = totalPrice - totalDiscount;
+
+    res.render("cart", { user, totalPrice, totalDiscount, netTotal });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error fetching cart details.");
+  }
+});
 
 router.get("/logout", isLoggedIn, (req, res) => {
   req.logout();
