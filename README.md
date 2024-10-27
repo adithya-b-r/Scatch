@@ -24,7 +24,7 @@ Scatch is an online platform designed for selling bags. It allows users to brows
 1. Clone the repository:
    ```bash
    git clone https://github.com/adithya-b-r/Scatch.git
-   cd scatch
+   cd Scatch
    ```
 
 2. Install dependencies:
